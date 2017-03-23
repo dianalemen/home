@@ -1,0 +1,9 @@
+<input type="text" #text1 (keyup)="done($event)">
+<button (click)="add(text1)">Add task</button>
+<ul>
+    <li *ngFor="let item of tasks">
+        <input type="checkbox" #check [checked]="item.status" (click)="setCompleted(item, check.value)">
+        <span> {{item.mustdo }}</span>
+        <button (click)="removeItem(item)"> x </button>
+    </li>
+</ul>

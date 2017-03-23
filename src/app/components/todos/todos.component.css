@@ -1,0 +1,8 @@
+li {
+    list-style: none;
+}
+
+input:checked+span {
+    color: gray;
+    text-decoration: line-through;
+}
